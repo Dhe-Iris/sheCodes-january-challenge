@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2025 Resolution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        margin: 0;
+      }
+      .hero-section {
+        color: white;
+        text-align: center;
+        line-height: 1;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/726/original/party.jpg?1735500876");
+        background-repeat: no-repeat;
+        background-size: cover;
+        line-height: 1.2;
+      }
+      .hero-section .overlay::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.4
+        ); /* Black overlay with 40% opacity */
+        z-index: 1;
+      }
+
+      .hero-section h1,
+      .hero-section h2,
+      .hero-section p,
+      .hero-section #btn {
+        position: relative;
+        z-index: 2; /* Ensures text stays above the overlay */
+      }
+
+      .hero-section h1 {
+        font-family: "poppins", sans-serif;
+        font-weight: 700;
+        font-size: 3rem;
+        text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+        margin: 0;
+        padding: 10px 0;
+      }
+      .hero-section h2 {
+        font-size: 2rem;
+        text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+        margin: 0;
+        padding: 5;
+      }
+      .hero-section p {
+        font-size: 1.3rem;
+        margin: 0;
+        padding: 20px 0;
+      }
+
+      button {
+        background-color: #fff;
+        color: #2575fc;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+      }
+      button:hover {
+        background-color: #00abf0;
+        color: #fff;
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+      .section-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        justify-content: space-around;
+        background-color: #fff;
+        flex-basis: 500px; /*used in place of height */
+        padding: 20px;
+      }
+
+      .section-container h3,
+      .section-container h2 {
+        text-align: center;
+        margin-top: 10px;
+      }
+      .resolution1,
+      .resolution2,
+      .resolution3,
+      .resolution4 {
+        padding-top: 20px;
+        margin-top: 30px;
+        width: 310px;
+        height: 350px;
+        border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+      .resolution1:hover,
+      .resolution2:hover,
+      .resolution3:hover,
+      .resolution4:hover {
+        background-color: rgb(216, 213, 213);
+        flex-grow: 0.4;
+      }
+      .list1,
+      .list2,
+      .list3,
+      .list4 {
+        list-style-type: none;
+        line-height: 1.7;
+      }
+      .motivation-section {
+        margin-top: 30px;
+        background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+        width: 100%;
+        height: 400px;
+        text-align: center;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 18px;
+      }
+      .quote {
+        font-size: 30px;
+      }
+      footer {
+        background: rgb(20, 20, 20);
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        overflow: hidden;
+      }
+      .footer-text h4 {
+        color: #fff;
+        font-size: 2rem;
+        padding: 10px 28px;
+        margin: 5px;
+      }
+      .footer-text img {
+        float: left;
+        padding: 10px;
+        max-width: 200px;
+        border-radius: 50%;
+        height: auto;
+      }
+      .footer-text img:hover {
+        transform: scale(1.1);
+      }
+      .footer-text p {
+        font-family: "poppins", sans-serif;
+        color: #e3ffe7;
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 10px;
+        text-align: justify;
+      }
+
+      .footer-text .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 15px;
+      }
+
+      .footer-text .tiktok,
+      .footer-text .linkedin,
+      .footer-text .whatsapp {
+        max-width: 29px;
+        padding: 3px;
+        margin: 0;
+      }
+
+      .footer-text .tiktok:hover,
+      .footer-text .linkedin:hover,
+      .footer-text .whatsapp:hover {
+        transform: scale(1.3);
+      }
+      .wish {
+        color: #fff;
+        text-align: center;
+        padding-top: 60px;
+      }
+      .coded {
+        color: #fff;
+        font-size: 0.8rem;
+        text-align: center;
+        padding-top: -50px;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:visited {
+        color: #00abf0;
+      }
+      a:hover {
+        color: #fff;
+      }
+
+      a {
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+      a:focus {
+        outline: 2px solid #00abf0;
+      }
+      @media (max-width: 600px) {
+        body {
+          flex-direction: column;
+          justify-content: flex-start; /* Align items vertically */
+          padding-top: 20px;
+        }
+
+        button {
+          width: 50%; /* Make the button wider on mobile */
+          padding: 15px;
+          font-size: 16px;
+        }
+        .footer-text .tiktok,
+        .footer-text .linkedin,
+        .footer-text .whatsapp {
+          max-width: 50px;
+          padding: 6px;
+          margin: 0;
+        }
+        .footer-text p {
+          font-size: 16px;
+          line-height: 1.9;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="hero-section">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <div class="overlay">
+          <h1>My 2025 <strong>New Year</strong> Resolution</h1>
+          <h2>
+            Embrace goals, achieve goals, become the better version of myself
+          </h2>
+          <p>Join me on my journey by clicking the button below</p>
+          <button id="btn">Join me</button>
+        </div>
+      </div>
+    </header>
+    <div class="section-container">
+      <section class="resolution1">
+        <h2>1</h2>
+        <h3>Body Health</h3>
+        <ul class="list1">
+          <li>Exercise More</li>
+          <li>Drink more water</li>
+          <li>Cut back on Soda</li>
+          <li>Reduce sugar intake</li>
+          <li>Go for a walk at least twice a week</li>
+        </ul>
+      </section>
+
+      <section class="resolution2">
+        <h2>2</h2>
+        <h3>Skills Development</h3>
+        <ul class="list2">
+          <li>Finish SheCodes Workshop</li>
+          <li>Finish all other ongoing Trainings</li>
+          <li>Build a Portfolio</li>
+          <li>Build more Real-life Projects</li>
+          <li>Engage in Hackathons</li>
+          <li>Seek Internship</li>
+          <li>Start Cybersecurity training</li>
+        </ul>
+      </section>
+
+      <section class="resolution3">
+        <h2>3</h2>
+        <h3>Personal Development</h3>
+        <ul class="list3">
+          <li>Read one book every month</li>
+          <li>Upgrade IQ and EQ</li>
+          <li>One Solo date every month</li>
+          <li>Upgrade Lifestyle</li>
+        </ul>
+      </section>
+      <section class="resolution4">
+        <h2>4</h2>
+        <h3>Finance</h3>
+        <ul class="list4">
+          <li>Stop Impulse Buying</li>
+          <li>Track My spending</li>
+          <li>Save More</li>
+          <li>Do not spend Business Money for pleasure</li>
+        </ul>
+      </section>
+    </div>
+    <section class="motivation-section">
+      <p>
+        <span class="quote"
+          ><em
+            ><strong
+              >"You don't have to be great to start, but you have to start to be
+              great"</strong
+            ></em
+          > </span
+        ><br /><br />
+        ~ Zig Ziglar <br />
+        <br />
+        Don't wait! What are your resolutions? Join the Movement and let's start
+        something marvelous
+        <br />
+        <br />
+        <button id="btn2">Make it happen</button>
+      </p>
+    </section>
+
+    <footer>
+      <div class="footer-text">
+        <h4>About Me</h4>
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/509/original/WhatsApp_Imag.jpg?1735245828"
+          alt="An about me image"
+        />
+        <p>
+          Hello, I am Kolade Dolapo, nicknamed <em>IRIS,</em> an enthusiastic
+          and determined female DEV. My journey into coding started with
+          curiosity and is growing into a full-fledged pursuit of becoming a
+          skilled full-stack developer. I’ve honed my skills in HTML, CSS, and I
+          am currently diving into the ocean of JavaScript and delving into
+          backend technologies like Node.js and MySQL.
+        </p>
+        <p>
+          Recently, I’ve also developed an interest in cybersecurity and the art
+          of securing the digital landscape—because every great creation
+          deserves to be protected. As someone who believes in learning through
+          action, next year, I shall embrace working on exciting projects,
+          including hackathons and internships. These, I believe, will push me
+          to grow, adapt, and find solutions in creative ways.
+        </p>
+        <p>
+          I plan to take my Programming skills to the next level this 2025. This
+          is just the beginning of my journey, and I can’t wait to see where it
+          takes me next. And when I am not coding? I have my nose buried in a
+          romance novel or up and about seeking the next exciting adventure for
+          the day. If you need an accountability partner or a group/community to
+          support your journey, feel free to message me directly on WhatsApp.
+          Let's grow together!
+        </p>
+
+        <div class="icons">
+          <a href="https://wa.me/+2348135324041" target="_blank">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/716/original/whatsapp_icon-removebg-preview-removebg-preview.png?1735498404"
+              alt="WhatsApp icon"
+              class="whatsapp"
+            />
+          </a>
+          <a
+            href="https://www.tiktok.com/@the_lady_developer?_r=1&_d=ecaamck5b441ik&sec_uid=MS4wLjABAAAAK-3-vnpRJHOwPyv8Itl5T7LUba4OLpGRYPhs9UfmY-53-PVgCjuklFWKaQwSNmqI&share_author_id=7037142217114960902&sharer_language=en&source=h5_m&u_code=dm2fbc19g44eij&ug_btm=b8727,b0&social_share_type=4&utm_source=copy&sec_user_id=MS4wLjABAAAAK-3-vnpRJHOwPyv8Itl5T7LUba4OLpGRYPhs9UfmY-53-PVgCjuklFWKaQwSNmqI&tt_from=copy&utm_medium=ios&utm_campaign=client_share&enable_checksum=1&user_id=7037142217114960902&share_link_id=92F2B31C-4899-458E-8EC3-CF0ADE545EA3&share_app_id=1233"
+            target="_blank"
+          >
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/520/original/tiktok_icon-removebg-preview.png?1735252704"
+              alt="TikTok icon"
+              class="tiktok"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dolapokolade22?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            target="_blank"
+          >
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/524/original/linkedin_icon-removebg-preview.png?1735252794"
+              alt="LinkedIn icon"
+              class="linkedin"
+            />
+          </a>
+        </div>
+      </div>
+      <p class="wish">
+        <em
+          ><strong
+            >Wishing you a Resourceful and Productive Happy New Year</strong
+          ></em
+        >
+      </p>
+      <p class="coded">
+        &copy; Coded by
+        <a href="https://wa.me/+2348135324041" target="_blank">IRIS</a>
+      </p>
+    </footer>
+    <script>
+      const texts = [
+        "Embrace goals",
+        "Achieve goals",
+        "To become the best Version of Myself",
+      ];
+      let index = 0;
+      setInterval(() => {
+        document.querySelector(".hero-content h2").textContent = texts[index];
+        index = (index + 1) % texts.length;
+      }, 2000);
+
+      document
+        .getElementById("btn" && "btn2")
+        .addEventListener("click", function () {
+          const phoneNumber = "2348135324041";
+          const message = "Hello Iris, I would like to connect!";
+          const encodedMessage = encodeURIComponent(message); // Encode the message
+          const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+          window.open(whatsappLink, "_blank"); // Open WhatsApp in a new tab
+        });
+    </script>
+  </body>
+</html>
+
+<!-- dont forget to push to github -->
